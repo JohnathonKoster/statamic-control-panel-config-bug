@@ -1,0 +1,57 @@
+title: User
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: 'Email Address'
+              listable: true
+              input: email
+          -
+            handle: avatar
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: the_grid_field
+            field:
+              fields:
+                -
+                  handle: the_entries_field
+                  field:
+                    max_items: 1
+                    mode: default
+                    create: true
+                    collections:
+                      - pages
+                    type: entries
+                    display: 'The Entries Field'
+                    icon: entries
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+              mode: table
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: 'The Grid Field'
+              icon: grid
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
